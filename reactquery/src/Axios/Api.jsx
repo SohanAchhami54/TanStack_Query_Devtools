@@ -28,8 +28,14 @@ export const getDataForQuery = async (pageNumber, limit = 3) => {
 };
 
 
-
-
+//to delete the data.
+export const deleteDataMutate=(id)=>{
+  return api.delete(`/posts/${id}`);
+}
+//to update the data.
+  export const updateDataMutate=({id,title,body})=>{
+    return api.put(`/posts/${id}`,{title,body});
+  }
 
 
 //data for the FetchIndividual.
