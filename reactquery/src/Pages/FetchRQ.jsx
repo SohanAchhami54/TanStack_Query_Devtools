@@ -36,9 +36,9 @@ const deleteMutation=useMutation({
 //useMutation hook to update the apidata.
 const updateMutation=useMutation({
    mutationFn:({id,title,body})=>updateDataMutate({id,title,body}),
-   onSuccess:(updatedata,element)=>{
+   onSuccess:(updatedata,element)=>{//update vaneko chai update vayerw aako data ani // element vaneko chai hami ley update garna ko lagi pathayko data.
+    console.log(element);
     const {id}=element;
-    console.log(updatedata,id);
     queryClient.setQueryData(['posts',pageNumber],(curElem)=>{
     
       return curElem?.map((curPost)=>{// harek ma map garney [0,1,2];
@@ -78,27 +78,6 @@ const updateMutation=useMutation({
 
              </section>
    {/* input form */}
-             {/* <section className="flex place-content-center text-sm md:text-lg  m-3 gap-5">
-                 <form>
-                  <input type="text"
-                   placeholder="Enter title"
-                  className="border text-center w-60 md:w-100"
-                  value={title}
-                   onChange={(e)=>setTitle(e.target.value)}
-                  />
-
-                    <input type="text"
-                   placeholder="Enter Body"
-                  className="border text-center w-60 md:w-120"
-                  value={body}
-                   onChange={(e)=>setBody(e.target.value)}
-                  />
-                 </form>
-               
-                  <button className="border px-1"
-                  onClick={()=>updateMutation.mutate({id:selectedPost,title,body})}        
-                  >Add</button>
-             </section> */}
              <section className="flex flex-col md:flex-row items-center justify-center gap-4 p-4 w-full max-w-screen-lg mx-auto">
                   <input
                     type="text"

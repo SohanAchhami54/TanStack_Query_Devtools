@@ -3,7 +3,7 @@
 import { MainLayout } from "./components/layout/Mainlayout";  
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
-import { Home } from "./Pages/Home";
+import { Scroll } from "./Pages/Scroll";
 import { FetchOld } from "./Pages/FetchOld";
 import { FetchRQ } from "./Pages/FetchRQ";
 import { FetchIndividual } from "./components/UI/FetchIndividual";
@@ -15,7 +15,7 @@ import { FetchIndividual } from "./components/UI/FetchIndividual";
     children:[
       {
         path:"/",
-        element:<Home/>,
+        element:<Scroll/>,
       },
       {
         path:"/trad",

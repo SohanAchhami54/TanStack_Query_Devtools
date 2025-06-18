@@ -51,3 +51,9 @@ export const getDataForIndi=async({queryKey})=>{
   throw error;
 }
 };
+
+//data for the Scroll
+export const getDataforScroll=async({pageParam=1})=>{
+  const res=await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=6994e0cd651a9bc5ad2cb6866ce0253f&page=${pageParam}`);
+  return res.status===200?res.data:[];
+}

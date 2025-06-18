@@ -8,7 +8,7 @@ export const FetchIndividual=()=>{
     queryKey:["individual",id],//when id change the queryFn get c
     queryFn:getDataForIndi,
   });
- 
+                    
   const {data,isPending,isError,error}=result;
   if(isPending) 
     return <p className="text-white text-xl text-center "> ...Loading </p>
